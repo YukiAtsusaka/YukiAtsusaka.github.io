@@ -6,7 +6,6 @@ const links = [
   ['Data/Software', '/data-software/'],
   ['Rankings', '/rankings/'],
   ['Teaching', '/teaching/'],
-  ['Affiliations', '/affiliations/'],
   ['CV', '/cv/'],
 ];
 

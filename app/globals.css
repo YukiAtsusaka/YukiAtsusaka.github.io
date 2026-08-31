@@ -18,3 +18,11 @@ html,body,button,input,textarea,select,h1,h2,h3,h4,h5,h6,p,a,span,li,dt,dd{font-
 .ranking-study-list{list-style:disc}
 .ranking-study-list{margin-top:22px;margin-bottom:22px}.ranking-study-list li{margin-bottom:6px}.ranking-study-list li:last-child{margin-bottom:0}
 .home-hero .name-title{font-family:Georgia,'Times New Roman',serif!important}
+.collaborator-affiliation{color:var(--ink)}
+.affiliation-name{font-size:23px}
+.rank-nav a{height:150px}
+#framework .ranking-study-list+p{display:none}
+#framework .ranking-study-list::before{content:"It also illustrates how political scientists have used ranking data in American politics, comparative politics, international relations, and beyond.";display:block;margin-bottom:22px}
+#framework .ranking-study-list::before{content:none;display:none}#framework>p:first-of-type::after{content:" It also illustrates how political scientists have used ranking data in American politics, comparative politics, international relations, and beyond."}
+.paper-abstract{margin-top:10px}.paper-abstract summary{color:var(--accent);cursor:pointer;font-weight:600;width:max-content}.paper-abstract p{margin:10px 0 0!important;color:var(--ink)}
+.paper-abstract{display:inline-block;margin:0 0 0 8px}.paper-abstract[open]{display:block;margin:10px 0 0}
