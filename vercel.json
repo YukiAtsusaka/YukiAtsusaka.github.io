@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/cwise",
+      "destination": "/cwise/index.html"
+    },
+    {
+      "source": "/cwise/",
+      "destination": "/cwise/index.html"
+    }
+  ]
+}
