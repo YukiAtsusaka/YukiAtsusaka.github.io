@@ -8,7 +8,6 @@ const dataItems=[
 const softwareItems=[
   ['logical','R package for computing and visualizing quantitative predictions of logical models.','https://github.com/YukiAtsusaka/logical'],
   ['cWise','R package for analyzing sensitive questions using the crosswise model.','https://www.atsusaka.org/cwise/'],
-  ['cWise vignettes','Guides to prevalence estimation and regression with a latent sensitive trait.','/cwise/'],
   ['rankingQ','Methods for producing quantities of interest from rank-order questions.','https://sysilviakim.com/rankingQ/'],
 ];
 
