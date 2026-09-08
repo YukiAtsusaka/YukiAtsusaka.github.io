@@ -1,14 +1,13 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": false,
-  "rewrites": [
+  "routes": [
     {
-      "source": "/cwise",
-      "destination": "/cwise/index.html"
+      "handle": "filesystem"
     },
     {
-      "source": "/cwise/",
-      "destination": "/cwise/index.html"
+      "src": "/cwise/?",
+      "dest": "/cwise/index.html"
     }
   ]
 }
