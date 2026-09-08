@@ -1,13 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": false,
-  "routes": [
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/cwise/?",
-      "dest": "/cwise/index.html"
-    }
-  ]
+  "outputDirectory": "out",
+  "cleanUrls": false
 }
