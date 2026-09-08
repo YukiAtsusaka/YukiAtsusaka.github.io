@@ -3,5 +3,22 @@
   "framework": null,
   "buildCommand": "npm run build",
   "outputDirectory": "out",
-  "cleanUrls": false
+  "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/articles/:path*",
+      "destination": "/cwise/articles/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/reference/:path*",
+      "destination": "/cwise/reference/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/news/:path*",
+      "destination": "/cwise/news/:path*",
+      "permanent": true
+    }
+  ]
 }
