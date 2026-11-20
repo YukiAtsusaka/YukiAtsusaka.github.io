@@ -324,7 +324,7 @@ export default function Research() {
             <strong>
               <em>Accepted</em>
             </strong>{" "}
-            at <em>Scientific Data</em>.
+            at <em>Nature: Scientific Data</em>.
             <br />
             <a
               href="https://political-rankings.github.io/"
