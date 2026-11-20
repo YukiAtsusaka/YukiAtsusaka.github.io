@@ -86,11 +86,7 @@ export default function Rankings() {
         </p>
         <ul className="ranking-study-list">
           <li>
-            Atsusaka, Y., &amp; Landsman, T. (
-            <strong>
-              <em>under editor review</em>
-            </strong>
-            ).{" "}
+            Atsusaka, Yuki, and Theodore Landsman. 2027.{" "}
             <a
               href="https://osf.io/preprints/socarxiv/r3nsm_v1"
               target="_blank"
@@ -101,9 +97,13 @@ export default function Rankings() {
                 science.
               </em>
             </a>
+            {" "}
+            <strong>
+              <em>Forthcoming.</em>
+            </strong>
           </li>
           <li>
-            Atsusaka, Y., &amp; Singh, S. (2026).{" "}
+            Atsusaka, Yuki, and Shubhangi Singh. 2026.{" "}
             <a
               href="https://osf.io/preprints/socarxiv/5t2f9_v1"
               target="_blank"
@@ -187,7 +187,7 @@ export default function Rankings() {
               <em>Scientific Data</em>, 13, 1419.
           </li>
           <li>
-            Atsusaka, Y., &amp; Singh, S. (2026).{" "}
+            Atsusaka, Yuki, and Shubhangi Singh. 2026.{" "}
             <a
               href="https://osf.io/preprints/socarxiv/5t2f9_v1"
               target="_blank"

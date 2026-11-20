@@ -273,6 +273,7 @@ export default function Research() {
           </p>
           <p style={{ order: -2 }}>
             <span className="paper-number">7. </span>
+            Atsusaka, Yuki, and Theodore Landsman. 2027. {" "}
             <a
               href="https://osf.io/preprints/socarxiv/r3nsm_v1"
               target="_blank"
@@ -281,7 +282,6 @@ export default function Research() {
               “Practical Framework for Ranking Data Analysis in Political
               Science.”
             </a>{" "}
-            With Theodore Landsman.{" "}
             <strong>
               <em>Forthcoming.</em>
             </strong>
@@ -305,6 +305,7 @@ export default function Research() {
           </p>
           <p style={{ order: -1 }}>
             <span className="paper-number">6. </span>
+            Atsusaka, Yuki, and Shubhangi Singh. 2026. {" "}
             <a
               href="https://osf.io/preprints/socarxiv/5t2f9_v2"
               target="_blank"
@@ -312,7 +313,6 @@ export default function Research() {
             >
               “Ranking Data in Political Science.”
             </a>{" "}
-            With Shubhangi Singh.{" "}
             <strong>
               <em>Accepted</em>
             </strong>{" "}
