@@ -1,15 +1,434 @@
-import PageIntro from '../../components/PageIntro';
+import PageIntro from "../../components/PageIntro";
 
-function Abstract({children}:{children:React.ReactNode}){return <details className="paper-abstract"><summary>Abstract</summary><p>{children}</p></details>}
+function Abstract({ children }: { children: React.ReactNode }) {
+  return (
+    <details className="paper-abstract">
+      <summary>Abstract</summary>
+      <p>{children}</p>
+    </details>
+  );
+}
 
-export default function Research(){return <><PageIntro title="Research"><p>My research focuses on three broad fields of electoral systems, race and representation, and political methodology. I study how political institutions shape electoral competition and representation and develop statistical methods for the social sciences.</p></PageIntro><section className="research-page"><h2>Publications</h2><div className="paper-list">
-<p><span className="paper-number">5. </span>Atsusaka, Yuki, and Jordan Holbrook. 2026. <a href="https://www.nature.com/articles/s41597-026-07623-3" target="_blank" rel="noreferrer">“A Dataset of Tabulated Results from American Ranked-Choice Voting Elections.”</a> <em>Nature: Scientific Data</em>, <strong>13</strong>, 1419.<br/><a href="https://www.archive-rcv.com/" target="_blank" rel="noreferrer">[Project website]</a> <a href="https://doi.org/10.7910/DVN/RCJA9Z" target="_blank" rel="noreferrer">[Replication files]</a> <a href="https://osf.io/preprints/socarxiv/27hgx_v3" target="_blank" rel="noreferrer">[Preprint]</a><Abstract>In the past two decades, a growing number of ranked-choice voting (RCV) elections have been conducted in various jurisdictions across the United States. However, tabulated results of RCV have been reported and stored in widely different styles across places and years, making it infeasible for researchers to perform systematic analyses of vote tabulations. We introduce ARCHIVE: a dataset of standardized tabulated results for over 7600 round-level candidate vote counts from 514 American RCV elections, 2004-2024. To construct the dataset, we develop a methodological procedure based on large language models that semi-automatically collect, standardize, and store candidate vote counts while instantly validating the resulting information. Our dataset releases multiple levels of data, including election metadata, round-level attributes, and candidate-level information with consistent election identifiers, allowing users to address key questions in electoral competition under RCV. Our project and user interface are also available on our corresponding website.</Abstract></p>
-<p><span className="paper-number">4. </span>Atsusaka, Yuki, and Seo-young Silvia Kim. 2025. <a href="https://doi.org/10.1017/pan.2024.33" target="_blank" rel="noreferrer">“Addressing Measurement Errors in Ranking Questions for the Social Sciences.”</a> <em>Political Analysis</em>.<br/><a href="https://sysilviakim.com/rankingQ/" target="_blank" rel="noreferrer">[R package: rankingQ]</a> <a href="https://doi.org/10.7910/DVN/UCTXEF" target="_blank" rel="noreferrer">[Replication files]</a> <a href="https://osf.io/3ys8x_v1" target="_blank" rel="noreferrer">[Preprint]</a><Abstract>Social scientists often use ranking questions to study people’s opinions and preferences. However, little is understood about the general nature of measurement errors in such questions, let alone their statistical consequences and what researchers can do about them. We introduce a statistical framework to improve ranking data analysis by addressing measurement errors in ranking questions. First, we characterize measurement errors from random responses—arbitrary and meaningless responses based on a wide range of random patterns. We then quantify bias due to random responses, show that the bias may change our conclusion in any direction, and clarify why item order randomization alone does not solve the statistical issue. Next, we introduce our methodology based on two key design-based considerations: item order randomization and the addition of an “anchor” ranking question with known correct answers. They allow researchers to learn about the direction of the bias and estimate the proportion of random responses, enabling our bias-corrected estimators. We illustrate our methods by studying the relative importance of people’s partisan identity compared to their racial, gender, and religious identities in American politics. We find that about 30% of respondents offered random responses and that these responses may affect our substantive conclusions.</Abstract></p>
-<p><span className="paper-number">3. </span>Atsusaka, Yuki. 2025. <a href="https://doi.org/10.1017/pan.2024.9" target="_blank" rel="noreferrer">“Analyzing Ballot Order Effects When Voters Rank Candidates.”</a> <em>Political Analysis</em> 33(1): 64–72.<br/><a href="https://doi.org/10.7910/DVN/AJXRCV" target="_blank" rel="noreferrer">[Replication files]</a> <a href="https://doi.org/10.1017/pan.2024.9" target="_blank" rel="noreferrer">[Article]</a> <a href="https://doi.org/10.48550/arXiv.2207.07005" target="_blank" rel="noreferrer">[Preprint]</a><Abstract>How does candidate order on the ballot affect voting behavior when voters rank candidates? I extend the analysis of ballot order effects to electoral systems with ordinal ballots, where voters rank candidates, including ranked-choice voting (RCV). First, I discuss two types of ballot order effects, including “position effects”—voters vote for specific candidates because of their ballot positions—and “pattern ranking”—voters rank candidates geometrically given their grid-style ballots. Next, I discuss experimental designs for identifying and estimating these effects based on ballot order randomization. Moreover, I illustrate the proposed methods by using survey and natural experiments based on mayoral and congressional RCV elections in 2022. I find that while voters seem less susceptible to specific ballot positions, ballot design can still impact voters’ ranking behavior via pattern ranking. This work has implications for ballot design, survey research, and ranking data analysis.</Abstract></p>
-<p><span className="paper-number">2. </span>Atsusaka, Yuki, and Randolph T. Stevenson. 2023. <a href="https://doi.org/10.1017/pan.2021.43" target="_blank" rel="noreferrer">“A Bias-Corrected Estimator for the Crosswise Model with Inattentive Respondents.”</a> <em>Political Analysis</em> 31(1): 134–148.<br/><a href="https://www.atsusaka.org/cwise/" target="_blank" rel="noreferrer">[R package: cWise]</a> <a href="https://doi.org/10.7910/DVN/AHWMIL" target="_blank" rel="noreferrer">[Replication files]</a> <a href="https://arxiv.org/abs/2010.16129" target="_blank" rel="noreferrer">[Preprint]</a><Abstract>The crosswise model is an increasingly popular survey technique to elicit candid answers from respondents on sensitive questions. Recent studies point out that in the presence of inattentive respondents, the conventional estimator of the prevalence of a sensitive attribute is biased toward 0.5. To remedy this problem, we propose a simple design-based bias correction using an anchor question that has a sensitive item with known prevalence. We demonstrate that we can estimate and correct for the bias arising from inattentive respondents without measuring individual-level attentiveness. We also offer extensions including sensitivity analysis, weighting, multivariate regressions, and tools for power analysis and parameter selection. Our method can be implemented through the open-source software cWise.</Abstract></p>
-<p><span className="paper-number">1. </span>Atsusaka, Yuki. 2021. <a href="https://doi.org/10.1017/S000305542100054X" target="_blank" rel="noreferrer">“A Logical Model for Predicting Minority Representation: Application to Redistricting and Voting Rights Cases.”</a> <em>American Political Science Review</em> 115(4): 1210–1225.<br/><a href="https://github.com/YukiAtsusaka/logical" target="_blank" rel="noreferrer">[R package: logical]</a> <a href="https://doi.org/10.7910/DVN/F2OX6O" target="_blank" rel="noreferrer">[Replication files]</a><Abstract>Understanding when and why minority candidates emerge and win in particular districts has important implications for redistricting and the Voting Rights Act. I introduce a quantitatively predictive logical model of minority candidate emergence and electoral success. I show that the model can predict about 90% of minority candidate emergence and 95% of electoral success using data on Louisiana mayoral elections and state legislative general elections. The model can answer questions about minority representation in redistricting and voting rights cases and can be implemented through the open-source software logical.</Abstract></p>
-
-Attempting to perform the InitializeDefaultDrives operation on the 'FileSystem' provider failed.<p><span className="paper-number">7. </span><a href="https://osf.io/preprints/socarxiv/r3nsm_v1" target="_blank" rel="noreferrer">“Practical Framework for Ranking Data Analysis in Political Science.”</a> With Theodore Landsman. <strong><em>Forthcoming.</em></strong><Abstract>The concept of rankings has long been central to politics and political institutions. Despite a long history and resurgent interest in political science, statistical methods for analyzing ranking data remain unfamiliar to most political scientists. In this essay, we show how systematic analyses of political rankings enable researchers to uncover rich information about various political phenomena based on rank orderings that has previously been inaccessible to them. We provide a practical guide to analyzing ranking data, highlight its value for applied research, and discuss key caveats and limitations. To illustrate our framework, we show that many essential questions in the study of ranked-choice voting (RCV) can be answered with data on candidate rankings. Our analysis reveals that partisanship can highly structure electoral competition in RCV, demonstrating how ordinal ballots offer insights that categorical ballots cannot provide.</Abstract></p><p><span className="paper-number">6. </span><a href="https://osf.io/preprints/socarxiv/5t2f9_v2" target="_blank" rel="noreferrer">“Ranking Data in Political Science.”</a> With Shubhangi Singh. <strong><em>Accepted</em></strong> at <em>Scientific Data</em>. <a href="https://political-rankings.github.io/" target="_blank" rel="noreferrer">[Project website]</a><Abstract>Across scientific disciplines, researchers have used ranking data to study people&apos;s comparative judgments, preferences, and decision-making over a range of items. While existing data-sharing infrastructures in statistics and machine learning, such as PrefLib, offer a rich collection of ranking datasets, including those related to politics, they are not necessarily designed specifically to support cumulative research in social science. In this work, we introduce the first large-scale database of political rankings based on various studies from leading political science journals. Our first release covers 52 datasets from 27 original studies published between 2005 and 2025. Our database demonstrates notable variation in substantive topics and forms of ranking data that go well beyond canonical examples of candidate evaluations and value orientations, enabling researchers to perform comparative analyses, replication, reanalysis, methodological evaluation, and new substantive research with real-world political rankings. Along with validating our database, we illustrate it by replicating key findings in four selected studies, including those of multiple identities in American politics, the representation of Muslims in India, factional leaning in the Syrian civil war, and legislative accountability for affordable health care.</Abstract></p></div><h2>Selected Working Papers</h2><div className="working-papers"><p><a href="https://osf.io/preprints/socarxiv/ctgkn_v1" target="_blank" rel="noreferrer">“Who Do People Blame for Affective Polarization?”</a> With Seo-young Silvia Kim. <strong><em>Under review.</em></strong><Abstract>Who do Americans blame for the rise of affective polarization? Using an original nationally representative survey with ranking questions, we show how Americans account for five actors’ responsibility for partisan animosity: politicians, traditional media, social media, interest groups, and citizens. Politicians receive the most blame, followed by traditional media, social media, and interest groups; citizens receive the least. The sharpest partisan division concerns traditional media, with Republicans assigning it substantially more blame than Democrats. These findings suggest that citizen-targeted depolarization interventions may face legitimacy challenges and that anti-press blame is more nuanced than a simple extension of partisanship.</Abstract></p></div><h2>Pre-Analysis Plan</h2><div className="working-papers"><p><a href="https://osf.io/zuhac/overview" target="_blank" rel="noreferrer">“Pre-Analysis Plan: Predicting Racial Descriptive Representation in the U.S. Congress: The Case of the 2026 Midterm Elections.”</a><br/><a href="https://logical-model.github.io/predictions-2026/" target="_blank" rel="noreferrer">[Project website]</a> <a href="/papers/atsusaka-kolbe-2026-v2.pdf" download>[Download PDF]</a><Abstract>Racial descriptive representation in the U.S. Congress has shaped debates over redistricting, voting rights, and partisan politics. We develop theory-based predictions of racial descriptive representation in the 2026 congressional elections. Drawing on a recent theoretical model with two inputs—district racial composition and the prior electoral performance of co-ethnic candidates—we generate district-level probabilistic predictions of winners’ racial group before Election Day. We predict that, in some districts, a focal racial group has a high probability of electoral victory even when it does not constitute a numerical majority. Nationally, we predict that the U.S. House will elect 7 Asian, 40 Black, 39 Latino, and 349 White legislators. These predictions imply White overrepresentation in the House in the 120th Congress by 14 percentage points, alongside Asian, Black, and Latino underrepresentation by 5, 3, and 3 percentage points, respectively, relative to each group’s share of the citizen voting-age population. If accurate, the forecasts will demonstrate the predictive value of local electoral context beyond district racial composition alone.</Abstract></p></div>
-<p className="working-papers-note">For other working papers, see <a href="/cv/">CV</a>.</p>
-</section>
-</>}
+export default function Research() {
+  return (
+    <>
+      <PageIntro title="Research">
+        <p>
+          My research focuses on three broad fields of electoral systems, race
+          and representation, and political methodology. I study how political
+          institutions shape electoral competition and representation and
+          develop statistical methods for the social sciences.
+        </p>
+      </PageIntro>
+      <section className="research-page">
+        <h2>Publications</h2>
+        <div className="paper-list" style={{ display: "flex", flexDirection: "column" }}>
+          <p>
+            <span className="paper-number">5. </span>Atsusaka, Yuki, and Jordan
+            Holbrook. 2026.{" "}
+            <a
+              href="https://www.nature.com/articles/s41597-026-07623-3"
+              target="_blank"
+              rel="noreferrer"
+            >
+              “A Dataset of Tabulated Results from American Ranked-Choice Voting
+              Elections.”
+            </a>{" "}
+            <em>Nature: Scientific Data</em>, 13, 1419.
+            <br />
+            <a
+              href="https://www.archive-rcv.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              [Project website]
+            </a>{" "}
+            <a
+              href="https://doi.org/10.7910/DVN/RCJA9Z"
+              target="_blank"
+              rel="noreferrer"
+            >
+              [Replication files]
+            </a>{" "}
+            <a
+              href="https://osf.io/preprints/socarxiv/27hgx_v3"
+              target="_blank"
+              rel="noreferrer"
+            >
+              [Preprint]
+            </a>
+            <Abstract>
+              In the past two decades, a growing number of ranked-choice voting
+              (RCV) elections have been conducted in various jurisdictions
+              across the United States. However, tabulated results of RCV have
+              been reported and stored in widely different styles across places
+              and years, making it infeasible for researchers to perform
+              systematic analyses of vote tabulations. We introduce ARCHIVE: a
+              dataset of standardized tabulated results for over 7600
+              round-level candidate vote counts from 514 American RCV elections,
+              2004-2024. To construct the dataset, we develop a methodological
+              procedure based on large language models that semi-automatically
+              collect, standardize, and store candidate vote counts while
+              instantly validating the resulting information. Our dataset
+              releases multiple levels of data, including election metadata,
+              round-level attributes, and candidate-level information with
+              consistent election identifiers, allowing users to address key
+              questions in electoral competition under RCV. Our project and user
+              interface are also available on our corresponding website.
+            </Abstract>
+          </p>
+          <p>
+            <span className="paper-number">4. </span>Atsusaka, Yuki, and
+            Seo-young Silvia Kim. 2025.{" "}
+            <a
+              href="https://doi.org/10.1017/pan.2024.33"
+              target="_blank"
+              rel="noreferrer"
+            >
+              “Addressing Measurement Errors in Ranking Questions for the Social
+              Sciences.”
+            </a>{" "}
+            <em>Political Analysis</em>.<br />
+            <a
+              href="https://sysilviakim.com/rankingQ/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              [R package: rankingQ]
+            </a>{" "}
+            <a
+              href="https://doi.org/10.7910/DVN/UCTXEF"
+              target="_blank"
+              rel="noreferrer"
+            >
+              [Replication files]
+            </a>{" "}
+            <a href="https://osf.io/3ys8x_v1" target="_blank" rel="noreferrer">
+              [Preprint]
+            </a>
+            <Abstract>
+              Social scientists often use ranking questions to study people’s
+              opinions and preferences. However, little is understood about the
+              general nature of measurement errors in such questions, let alone
+              their statistical consequences and what researchers can do about
+              them. We introduce a statistical framework to improve ranking data
+              analysis by addressing measurement errors in ranking questions.
+              First, we characterize measurement errors from random
+              responses—arbitrary and meaningless responses based on a wide
+              range of random patterns. We then quantify bias due to random
+              responses, show that the bias may change our conclusion in any
+              direction, and clarify why item order randomization alone does not
+              solve the statistical issue. Next, we introduce our methodology
+              based on two key design-based considerations: item order
+              randomization and the addition of an “anchor” ranking question
+              with known correct answers. They allow researchers to learn about
+              the direction of the bias and estimate the proportion of random
+              responses, enabling our bias-corrected estimators. We illustrate
+              our methods by studying the relative importance of people’s
+              partisan identity compared to their racial, gender, and religious
+              identities in American politics. We find that about 30% of
+              respondents offered random responses and that these responses may
+              affect our substantive conclusions.
+            </Abstract>
+          </p>
+          <p>
+            <span className="paper-number">3. </span>Atsusaka, Yuki. 2025.{" "}
+            <a
+              href="https://doi.org/10.1017/pan.2024.9"
+              target="_blank"
+              rel="noreferrer"
+            >
+              “Analyzing Ballot Order Effects When Voters Rank Candidates.”
+            </a>{" "}
+            <em>Political Analysis</em> 33(1): 64–72.
+            <br />
+            <a
+              href="https://doi.org/10.7910/DVN/AJXRCV"
+              target="_blank"
+              rel="noreferrer"
+            >
+              [Replication files]
+            </a>{" "}
+            <a
+              href="https://doi.org/10.1017/pan.2024.9"
+              target="_blank"
+              rel="noreferrer"
+            >
+              [Article]
+            </a>{" "}
+            <a
+              href="https://doi.org/10.48550/arXiv.2207.07005"
+              target="_blank"
+              rel="noreferrer"
+            >
+              [Preprint]
+            </a>
+            <Abstract>
+              How does candidate order on the ballot affect voting behavior when
+              voters rank candidates? I extend the analysis of ballot order
+              effects to electoral systems with ordinal ballots, where voters
+              rank candidates, including ranked-choice voting (RCV). First, I
+              discuss two types of ballot order effects, including “position
+              effects”—voters vote for specific candidates because of their
+              ballot positions—and “pattern ranking”—voters rank candidates
+              geometrically given their grid-style ballots. Next, I discuss
+              experimental designs for identifying and estimating these effects
+              based on ballot order randomization. Moreover, I illustrate the
+              proposed methods by using survey and natural experiments based on
+              mayoral and congressional RCV elections in 2022. I find that while
+              voters seem less susceptible to specific ballot positions, ballot
+              design can still impact voters’ ranking behavior via pattern
+              ranking. This work has implications for ballot design, survey
+              research, and ranking data analysis.
+            </Abstract>
+          </p>
+          <p>
+            <span className="paper-number">2. </span>Atsusaka, Yuki, and
+            Randolph T. Stevenson. 2023.{" "}
+            <a
+              href="https://doi.org/10.1017/pan.2021.43"
+              target="_blank"
+              rel="noreferrer"
+            >
+              “A Bias-Corrected Estimator for the Crosswise Model with
+              Inattentive Respondents.”
+            </a>{" "}
+            <em>Political Analysis</em> 31(1): 134–148.
+            <br />
+            <a
+              href="https://www.atsusaka.org/cwise/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              [R package: cWise]
+            </a>{" "}
+            <a
+              href="https://doi.org/10.7910/DVN/AHWMIL"
+              target="_blank"
+              rel="noreferrer"
+            >
+              [Replication files]
+            </a>{" "}
+            <a
+              href="https://arxiv.org/abs/2010.16129"
+              target="_blank"
+              rel="noreferrer"
+            >
+              [Preprint]
+            </a>
+            <Abstract>
+              The crosswise model is an increasingly popular survey technique to
+              elicit candid answers from respondents on sensitive questions.
+              Recent studies point out that in the presence of inattentive
+              respondents, the conventional estimator of the prevalence of a
+              sensitive attribute is biased toward 0.5. To remedy this problem,
+              we propose a simple design-based bias correction using an anchor
+              question that has a sensitive item with known prevalence. We
+              demonstrate that we can estimate and correct for the bias arising
+              from inattentive respondents without measuring individual-level
+              attentiveness. We also offer extensions including sensitivity
+              analysis, weighting, multivariate regressions, and tools for power
+              analysis and parameter selection. Our method can be implemented
+              through the open-source software cWise.
+            </Abstract>
+          </p>
+          <p>
+            <span className="paper-number">1. </span>Atsusaka, Yuki. 2021.{" "}
+            <a
+              href="https://doi.org/10.1017/S000305542100054X"
+              target="_blank"
+              rel="noreferrer"
+            >
+              “A Logical Model for Predicting Minority Representation:
+              Application to Redistricting and Voting Rights Cases.”
+            </a>{" "}
+            <em>American Political Science Review</em> 115(4): 1210–1225.
+            <br />
+            <a
+              href="https://github.com/YukiAtsusaka/logical"
+              target="_blank"
+              rel="noreferrer"
+            >
+              [R package: logical]
+            </a>{" "}
+            <a
+              href="https://doi.org/10.7910/DVN/F2OX6O"
+              target="_blank"
+              rel="noreferrer"
+            >
+              [Replication files]
+            </a>
+            <Abstract>
+              Understanding when and why minority candidates emerge and win in
+              particular districts has important implications for redistricting
+              and the Voting Rights Act. I introduce a quantitatively predictive
+              logical model of minority candidate emergence and electoral
+              success. I show that the model can predict about 90% of minority
+              candidate emergence and 95% of electoral success using data on
+              Louisiana mayoral elections and state legislative general
+              elections. The model can answer questions about minority
+              representation in redistricting and voting rights cases and can be
+              implemented through the open-source software logical.
+            </Abstract>
+          </p>
+          <p style={{ order: -2 }}>
+            <span className="paper-number">7. </span>
+            <a
+              href="https://osf.io/preprints/socarxiv/r3nsm_v1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              “Practical Framework for Ranking Data Analysis in Political
+              Science.”
+            </a>{" "}
+            With Theodore Landsman.{" "}
+            <strong>
+              <em>Forthcoming.</em>
+            </strong>
+            <Abstract>
+              The concept of rankings has long been central to politics and
+              political institutions. Despite a long history and resurgent
+              interest in political science, statistical methods for analyzing
+              ranking data remain unfamiliar to most political scientists. In
+              this essay, we show how systematic analyses of political rankings
+              enable researchers to uncover rich information about various
+              political phenomena based on rank orderings that has previously
+              been inaccessible to them. We provide a practical guide to
+              analyzing ranking data, highlight its value for applied research,
+              and discuss key caveats and limitations. To illustrate our
+              framework, we show that many essential questions in the study of
+              ranked-choice voting (RCV) can be answered with data on candidate
+              rankings. Our analysis reveals that partisanship can highly
+              structure electoral competition in RCV, demonstrating how ordinal
+              ballots offer insights that categorical ballots cannot provide.
+            </Abstract>
+          </p>
+          <p style={{ order: -1 }}>
+            <span className="paper-number">6. </span>
+            <a
+              href="https://osf.io/preprints/socarxiv/5t2f9_v2"
+              target="_blank"
+              rel="noreferrer"
+            >
+              “Ranking Data in Political Science.”
+            </a>{" "}
+            With Shubhangi Singh.{" "}
+            <strong>
+              <em>Accepted</em>
+            </strong>{" "}
+            at <em>Scientific Data</em>.{" "}
+            <a
+              href="https://political-rankings.github.io/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              [Project website]
+            </a>
+            <Abstract>
+              Across scientific disciplines, researchers have used ranking data
+              to study people&apos;s comparative judgments, preferences, and
+              decision-making over a range of items. While existing data-sharing
+              infrastructures in statistics and machine learning, such as
+              PrefLib, offer a rich collection of ranking datasets, including
+              those related to politics, they are not necessarily designed
+              specifically to support cumulative research in social science. In
+              this work, we introduce the first large-scale database of
+              political rankings based on various studies from leading political
+              science journals. Our first release covers 52 datasets from 27
+              original studies published between 2005 and 2025. Our database
+              demonstrates notable variation in substantive topics and forms of
+              ranking data that go well beyond canonical examples of candidate
+              evaluations and value orientations, enabling researchers to
+              perform comparative analyses, replication, reanalysis,
+              methodological evaluation, and new substantive research with
+              real-world political rankings. Along with validating our database,
+              we illustrate it by replicating key findings in four selected
+              studies, including those of multiple identities in American
+              politics, the representation of Muslims in India, factional
+              leaning in the Syrian civil war, and legislative accountability
+              for affordable health care.
+            </Abstract>
+          </p>
+        </div>
+        <h2>Selected Working Papers</h2>
+        <div className="working-papers">
+          <p>
+            <a
+              href="https://osf.io/preprints/socarxiv/ctgkn_v1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              “Who Do People Blame for Affective Polarization?”
+            </a>{" "}
+            With Seo-young Silvia Kim.{" "}
+            <strong>
+              <em>Under review.</em>
+            </strong>
+            <Abstract>
+              Who do Americans blame for the rise of affective polarization?
+              Using an original nationally representative survey with ranking
+              questions, we show how Americans account for five actors’
+              responsibility for partisan animosity: politicians, traditional
+              media, social media, interest groups, and citizens. Politicians
+              receive the most blame, followed by traditional media, social
+              media, and interest groups; citizens receive the least. The
+              sharpest partisan division concerns traditional media, with
+              Republicans assigning it substantially more blame than Democrats.
+              These findings suggest that citizen-targeted depolarization
+              interventions may face legitimacy challenges and that anti-press
+              blame is more nuanced than a simple extension of partisanship.
+            </Abstract>
+          </p>
+        </div>
+        <h2>Pre-Analysis Plan</h2>
+        <div className="working-papers">
+          <p>
+            <a
+              href="https://osf.io/zuhac/overview"
+              target="_blank"
+              rel="noreferrer"
+            >
+              “Pre-Analysis Plan: Predicting Racial Descriptive Representation
+              in the U.S. Congress: The Case of the 2026 Midterm Elections.”
+            </a>
+            <br />
+            <a
+              href="https://logical-model.github.io/predictions-2026/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              [Project website]
+            </a>{" "}
+            <a href="/papers/atsusaka-kolbe-2026-v2.pdf" download>
+              [Download PDF]
+            </a>
+            <Abstract>
+              Racial descriptive representation in the U.S. Congress has shaped
+              debates over redistricting, voting rights, and partisan politics.
+              We develop theory-based predictions of racial descriptive
+              representation in the 2026 congressional elections. Drawing on a
+              recent theoretical model with two inputs—district racial
+              composition and the prior electoral performance of co-ethnic
+              candidates—we generate district-level probabilistic predictions of
+              winners’ racial group before Election Day. We predict that, in
+              some districts, a focal racial group has a high probability of
+              electoral victory even when it does not constitute a numerical
+              majority. Nationally, we predict that the U.S. House will elect 7
+              Asian, 40 Black, 39 Latino, and 349 White legislators. These
+              predictions imply White overrepresentation in the House in the
+              120th Congress by 14 percentage points, alongside Asian, Black,
+              and Latino underrepresentation by 5, 3, and 3 percentage points,
+              respectively, relative to each group’s share of the citizen
+              voting-age population. If accurate, the forecasts will demonstrate
+              the predictive value of local electoral context beyond district
+              racial composition alone.
+            </Abstract>
+          </p>
+        </div>
+        <p className="working-papers-note">
+          For other working papers, see <a href="/cv/">CV</a>.
+        </p>
+      </section>
+    </>
+  );
+}
