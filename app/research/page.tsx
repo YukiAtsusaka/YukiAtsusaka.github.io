@@ -285,6 +285,14 @@ export default function Research() {
             <strong>
               <em>Forthcoming.</em>
             </strong>
+            <br />
+            <a
+              href="https://political-rankings.github.io/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              [Project website]
+            </a>
             <Abstract>
               The concept of rankings has long been central to politics and
               political institutions. Despite a long history and resurgent
@@ -316,7 +324,8 @@ export default function Research() {
             <strong>
               <em>Accepted</em>
             </strong>{" "}
-            at <em>Scientific Data</em>.{" "}
+            at <em>Scientific Data</em>.
+            <br />
             <a
               href="https://political-rankings.github.io/"
               target="_blank"
