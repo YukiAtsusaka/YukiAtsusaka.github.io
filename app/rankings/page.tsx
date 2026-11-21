@@ -44,7 +44,7 @@ const collaborators = [
   {
     name: "Shubhangi Singh",
     affiliation: "University of Houston",
-    url: "https://www.uh.edu/class/economics/people/phd-student-directory/",
+    url: "https://sites.google.com/view/shubhangi-singh-economics",
   },
   {
     name: "Theodore Landsman",
