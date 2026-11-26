@@ -6,7 +6,7 @@ const accessMetrics: Record<string, AccessMetric> = publicationMetrics;
 
 function Abstract({ children, paperId }: { children: React.ReactNode; paperId?: string }) {
   const metric = paperId ? accessMetrics[paperId] : undefined;
-  const published = paperId === "27hgx_v3" || paperId === "3ys8x_v1";
+  const published = paperId === "27hgx_v3" || paperId === "3ys8x_v1" || paperId?.startsWith("cambridge-");
   const total = metric ? (published ? metric.publisherAccesses : metric.views + metric.downloads) : undefined;
   const description = metric?.publisherAccesses !== undefined
     ? `Publisher-reported article accesses; ${metric.publisherVerification ?? "publisher page"}.`
@@ -174,7 +174,7 @@ export default function Research() {
             >
               [Preprint]
             </a>
-            <Abstract>
+            <Abstract paperId="cambridge-ballot-order">
               How does candidate order on the ballot affect voting behavior when
               voters rank candidates? I extend the analysis of ballot order
               effects to electoral systems with ordinal ballots, where voters
@@ -227,7 +227,7 @@ export default function Research() {
             >
               [Preprint]
             </a>
-            <Abstract>
+            <Abstract paperId="cambridge-crosswise">
               The crosswise model is an increasingly popular survey technique to
               elicit candid answers from respondents on sensitive questions.
               Recent studies point out that in the presence of inattentive
@@ -269,7 +269,7 @@ export default function Research() {
             >
               [Replication files]
             </a>
-            <Abstract>
+            <Abstract paperId="cambridge-logical">
               Understanding when and why minority candidates emerge and win in
               particular districts has important implications for redistricting
               and the Voting Rights Act. I introduce a quantitatively predictive
