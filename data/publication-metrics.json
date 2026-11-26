@@ -13,7 +13,14 @@
     "views": 1818,
     "downloads": 2901,
     "updated": "2026-11-26",
-    "source": "https://osf.io/3ys8x_v1"
+    "source": "https://osf.io/3ys8x_v1",
+    "publisherAccesses": 3595,
+    "publisherSource": "https://www.cambridge.org/core/journals/political-analysis/article/addressing-measurement-errors-in-ranking-questions-for-the-social-sciences/6960C9B762A182E2C5C064E4F32D26AD",
+    "publisherUpdated": "2026-11-26",
+    "publisherVerification": "Cambridge Core Metrics tab: 2210 HTML views + 1385 PDF views; abstract views excluded",
+    "publisherHtmlViews": 2210,
+    "publisherPdfViews": 1385,
+    "publisherAbstractViews": 2193
   },
   "r3nsm_v1": {
     "views": 79,
@@ -26,5 +33,44 @@
     "downloads": 56,
     "updated": "2026-11-26",
     "source": "https://osf.io/preprints/socarxiv/5t2f9_v2"
+  },
+  "cambridge-ballot-order": {
+    "views": 2530,
+    "downloads": 1704,
+    "updated": "2026-11-26",
+    "source": "https://www.cambridge.org/core/journals/political-analysis/article/analyzing-ballot-order-effects-when-voters-rank-candidates/875780C729250C5D5464A57F8B243377",
+    "publisherAccesses": 4234,
+    "publisherSource": "https://www.cambridge.org/core/journals/political-analysis/article/analyzing-ballot-order-effects-when-voters-rank-candidates/875780C729250C5D5464A57F8B243377",
+    "publisherUpdated": "2026-11-26",
+    "publisherVerification": "Cambridge Core Metrics tab: 2530 HTML views + 1704 PDF views; abstract views excluded",
+    "publisherHtmlViews": 2530,
+    "publisherPdfViews": 1704,
+    "publisherAbstractViews": 2516
+  },
+  "cambridge-crosswise": {
+    "views": 1736,
+    "downloads": 1145,
+    "updated": "2026-11-26",
+    "source": "https://www.cambridge.org/core/journals/political-analysis/article/biascorrected-estimator-for-the-crosswise-model-with-inattentive-respondents/A3A92B0C95713711980C9296DEAF7A1E",
+    "publisherAccesses": 2881,
+    "publisherSource": "https://www.cambridge.org/core/journals/political-analysis/article/biascorrected-estimator-for-the-crosswise-model-with-inattentive-respondents/A3A92B0C95713711980C9296DEAF7A1E",
+    "publisherUpdated": "2026-11-26",
+    "publisherVerification": "Cambridge Core Metrics tab: 1736 HTML views + 1145 PDF views; abstract views excluded",
+    "publisherHtmlViews": 1736,
+    "publisherPdfViews": 1145,
+    "publisherAbstractViews": 2723
+  },
+  "cambridge-logical": {
+    "views": 2847,
+    "downloads": 1888,
+    "updated": "2026-11-26",
+    "source": "https://www.cambridge.org/core/journals/american-political-science-review/article/logical-model-for-predicting-minority-representation-application-to-redistricting-and-voting-rights-cases/86C3B6E592B2B9111F58634AE656CD60",
+    "publisherAccesses": 4735,
+    "publisherSource": "https://www.cambridge.org/core/journals/american-political-science-review/article/logical-model-for-predicting-minority-representation-application-to-redistricting-and-voting-rights-cases/86C3B6E592B2B9111F58634AE656CD60",
+    "publisherUpdated": "2026-11-26",
+    "publisherVerification": "Cambridge Core Metrics tab: 2847 HTML views + 1888 PDF views; abstract views excluded",
+    "publisherHtmlViews": 2847,
+    "publisherPdfViews": 1888,
+    "publisherAbstractViews": 5375
   }
 }
