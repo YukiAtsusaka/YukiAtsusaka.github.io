@@ -164,13 +164,6 @@ export default function Research() {
               [Replication files]
             </a>{" "}
             <a
-              href="https://doi.org/10.1017/pan.2024.9"
-              target="_blank"
-              rel="noreferrer"
-            >
-              [Article]
-            </a>{" "}
-            <a
               href="https://doi.org/10.48550/arXiv.2207.07005"
               target="_blank"
               rel="noreferrer"
