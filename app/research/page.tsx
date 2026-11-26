@@ -1,18 +1,22 @@
 import PageIntro from "../../components/PageIntro";
 import publicationMetrics from "../../data/publication-metrics.json";
 
-type AccessMetric = { views: number; downloads: number; updated: string; source: string };
+type AccessMetric = { views: number; downloads: number; updated: string; source: string; publisherAccesses?: number; publisherSource?: string; publisherUpdated?: string; publisherVerification?: string };
 const accessMetrics: Record<string, AccessMetric> = publicationMetrics;
 
 function Abstract({ children, paperId }: { children: React.ReactNode; paperId?: string }) {
   const metric = paperId ? accessMetrics[paperId] : undefined;
-  const total = metric ? metric.views + metric.downloads : undefined;
+  const total = metric ? (metric.publisherAccesses ?? (metric.views + metric.downloads)) : undefined;
+  const publishedPreprintOnly = paperId === "3ys8x_v1" && metric?.publisherAccesses === undefined;
+  const description = metric?.publisherAccesses !== undefined
+    ? `Publisher-reported article accesses; ${metric.publisherVerification ?? "publisher page"}.`
+    : "OSF views + downloads; not unique readers.";
   return (
     <>
       {metric && total !== undefined && (
         <span style={{ display: "inline-block", fontSize: "0.88em", marginLeft: "0.5rem", marginRight: "0.25rem" }}
-          title={`OSF views + downloads; not unique readers.`}>
-          Accesses: {total.toLocaleString("en-US")}
+          title={description}>
+          {publishedPreprintOnly ? "Preprint accesses" : "Accesses"}: {total.toLocaleString("en-US")}
         </span>
       )}
       <details className="paper-abstract">
