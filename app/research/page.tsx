@@ -1,11 +1,28 @@
 import PageIntro from "../../components/PageIntro";
+import publicationMetrics from "../../data/publication-metrics.json";
 
-function Abstract({ children }: { children: React.ReactNode }) {
+type AccessMetric = { views: number; downloads: number; updated: string; source: string };
+const accessMetrics: Record<string, AccessMetric> = publicationMetrics;
+
+function Abstract({ children, paperId }: { children: React.ReactNode; paperId?: string }) {
+  const metric = paperId ? accessMetrics[paperId] : undefined;
+  const total = metric ? metric.views + metric.downloads : undefined;
   return (
-    <details className="paper-abstract">
-      <summary>Abstract</summary>
-      <p>{children}</p>
-    </details>
+    <>
+      {metric && total !== undefined && (
+        <span style={{ display: "inline-block", fontSize: "0.88em", marginRight: "0.25rem" }}>
+          <a href={metric.source} target="_blank" rel="noreferrer"
+            title={`OSF preprint version: ${metric.views.toLocaleString("en-US")} views + ${metric.downloads.toLocaleString("en-US")} downloads; not unique readers.`}>
+            OSF accesses: {total.toLocaleString("en-US")}
+          </a>{" "}
+          <span style={{ fontSize: "0.9em" }}>(updated {metric.updated})</span>
+        </span>
+      )}
+      <details className="paper-abstract">
+        <summary>Abstract</summary>
+        <p>{children}</p>
+      </details>
+    </>
   );
 }
 
@@ -57,7 +74,7 @@ export default function Research() {
             >
               [Preprint]
             </a>
-            <Abstract>
+            <Abstract paperId="27hgx_v3">
               In the past two decades, a growing number of ranked-choice voting
               (RCV) elections have been conducted in various jurisdictions
               across the United States. However, tabulated results of RCV have
@@ -106,7 +123,7 @@ export default function Research() {
             <a href="https://osf.io/3ys8x_v1" target="_blank" rel="noreferrer">
               [Preprint]
             </a>
-            <Abstract>
+            <Abstract paperId="3ys8x_v1">
               Social scientists often use ranking questions to study people’s
               opinions and preferences. However, little is understood about the
               general nature of measurement errors in such questions, let alone
@@ -293,7 +310,7 @@ export default function Research() {
             >
               [Project website]
             </a>
-            <Abstract>
+            <Abstract paperId="r3nsm_v1">
               The concept of rankings has long been central to politics and
               political institutions. Despite a long history and resurgent
               interest in political science, statistical methods for analyzing
@@ -333,7 +350,7 @@ export default function Research() {
             >
               [Project website]
             </a>
-            <Abstract>
+            <Abstract paperId="5t2f9_v2">
               Across scientific disciplines, researchers have used ranking data
               to study people&apos;s comparative judgments, preferences, and
               decision-making over a range of items. While existing data-sharing
