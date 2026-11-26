@@ -16,7 +16,7 @@ export async function refreshMetrics(previous, fetcher = fetch, now = new Date()
   const next = structuredClone(previous);
   for (const [id, entry] of Object.entries(previous)) {
     // Published papers use version-of-record metrics only; never substitute OSF.
-    if (id === "27hgx_v3" || id === "3ys8x_v1") continue;
+    if (id === "27hgx_v3" || id === "3ys8x_v1" || id.startsWith("cambridge-")) continue;
     if (!/^[a-z0-9]{5}_v[1-9][0-9]*$/.test(id)) {
       console.warn("Skipping invalid OSF version ID");
       continue;
