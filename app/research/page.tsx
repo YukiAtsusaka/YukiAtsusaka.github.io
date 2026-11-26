@@ -10,12 +10,9 @@ function Abstract({ children, paperId }: { children: React.ReactNode; paperId?: 
   return (
     <>
       {metric && total !== undefined && (
-        <span style={{ display: "inline-block", fontSize: "0.88em", marginRight: "0.25rem" }}>
-          <a href={metric.source} target="_blank" rel="noreferrer"
-            title={`OSF preprint version: ${metric.views.toLocaleString("en-US")} views + ${metric.downloads.toLocaleString("en-US")} downloads; not unique readers.`}>
-            OSF accesses: {total.toLocaleString("en-US")}
-          </a>{" "}
-          <span style={{ fontSize: "0.9em" }}>(updated {metric.updated})</span>
+        <span style={{ display: "inline-block", fontSize: "0.88em", marginLeft: "0.5rem", marginRight: "0.25rem" }}
+          title={`OSF views + downloads; not unique readers.`}>
+          Accesses: {total.toLocaleString("en-US")}
         </span>
       )}
       <details className="paper-abstract">
